@@ -6,8 +6,6 @@ use Redaxscript\Modules;
 /**
  * Use Redaxscript to controll parts of Uberspace
  *
- * @since 3.0.0
- *
  * @package Redaxscript
  * @category Modules
  * @author Peter Siemer
