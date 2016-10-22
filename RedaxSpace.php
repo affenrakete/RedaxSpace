@@ -2,13 +2,12 @@
 namespace Redaxscript\Modules\RedaxSpace;
 
 use Redaxscript\Head;
-use Redaxscript\Language;
 use Redaxscript\Registry;
-use Redaxscript\Request;
 
 /**
- * Use Redaxscript to controll parts of Uberspace
- **
+ *
+ * @since
+ *
  * @package Redaxscript
  * @category Modules
  * @author Peter Siemer
@@ -21,15 +20,38 @@ class RedaxSpace extends Config
      *
      * @var array
      */
+
     protected static $_moduleArray =
         [
             'name' => 'RedaxSpace',
             'alias' => 'RedaxSpace',
-            'author' => 'nkler',
-            'description' => 'Use Redaxscript to controll parts of Uberspace',
-            'version' => '3.0.0',
-            'access' => '1'
+            'author' => 'Peter Siemer',
+            'description' => '',
+            'version' => '1.0.0'
         ];
-}
 
-?>
+    /**
+     * renderStart
+     *
+     * @since 1.0.0
+     *
+     * @param string
+     */
+
+    public static function render($start = null)
+    {
+        if (Registry::get('loggedIn') === Registry::get('token'))
+        {
+            switch ($start)
+            {
+                case 'password' :
+                    break;
+                case 'email' :
+                    break;
+            }
+        }
+        return;
+    }
+
+
+}

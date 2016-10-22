@@ -1,14 +1,16 @@
 <?php
 namespace Redaxscript\Modules\RedaxSpace;
 
-use Redaxscript\Modules;
+use Redaxscript\Module;
 
 /**
- * Use Redaxscript to controll parts of Uberspace
+ * children class to store module config
+ *
+ * @since 1.0.0
  *
  * @package Redaxscript
  * @category Modules
- * @author Peter Siemer
+ * @author Henry Ruhs
  */
 
 class Config extends Module
@@ -18,10 +20,9 @@ class Config extends Module
      *
      * @var array
      */
+
     protected static $_configArray =
         [
-
+            'uploaddir' => '/upload'
         ];
 }
-
-?>
