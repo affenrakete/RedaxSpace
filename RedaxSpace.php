@@ -42,16 +42,12 @@ class RedaxSpace extends Config
     {
         if (Registry::get('loggedIn') === Registry::get('token'))
         {
-            switch ($start)
-            {
+            switch ($start) {
                 case 'password' :
                     break;
                 case 'email' :
                     break;
             }
         }
-        return;
     }
-
-
 }
