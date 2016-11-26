@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS /* {configPrefix} */redaxspace (
+	id bigint(20) PRIMARY KEY AUTO_INCREMENT,
+	user_id bigint(20) NOT NULL,
+	alias varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+	value varchar(255) COLLATE utf8_unicode_ci NOT NULL
+)
+ENGINE = MyISAM
+DEFAULT CHARSET = utf8
+COLLATE = utf8_unicode_ci
+AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS /* {configPrefix} */redaxspace_email (
+	id bigint(20) PRIMARY KEY AUTO_INCREMENT,
+	user_id bigint(20) NOT NULL,
+	user_email varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+	alias varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+	description varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+	decay bigint(20) NOT NULL
+)
+ENGINE = MyISAM
+DEFAULT CHARSET = utf8
+COLLATE = utf8_unicode_ci
+AUTO_INCREMENT = 1;

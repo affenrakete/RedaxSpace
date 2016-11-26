@@ -25,4 +25,22 @@ class Config extends Module
         [
             'uploaddir' => '/upload'
         ];
+
+    public function get($key = null)
+    {
+        if (array_key_exists($key, self::$_configArray))
+        {
+            return self::$_configArray[$key];
+        }
+        else if (!$key)
+        {
+            return self::$_configArray;
+        }
+        return false;
+    }
+
+    public function set($key = null, $value = null)
+    {
+        self::$_configArray[$key] = $value;
+    }
 }

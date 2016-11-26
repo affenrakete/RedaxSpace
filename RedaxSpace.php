@@ -1,6 +1,7 @@
 <?php
 namespace Redaxscript\Modules\RedaxSpace;
 
+use Redaxscript\Db;
 use Redaxscript\Head;
 use Redaxscript\Registry;
 
@@ -40,12 +41,17 @@ class RedaxSpace extends Config
 
     public static function render($start = null)
     {
-        if (Registry::get('loggedIn') === Registry::get('token'))
-        {
+        if (Registry::get('loggedIn') === Registry::get('token')) {
             switch ($start) {
                 case 'password' :
                     break;
+
                 case 'email' :
+                    include_once('modules/RedaxSpace/includes/RedaxSpaceEmail.php');
+
+                    $renderNow = new RedaxSpaceEmail();
+                    $renderNow -> render();
+
                     break;
             }
         }
