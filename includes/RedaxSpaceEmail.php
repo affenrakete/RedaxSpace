@@ -96,19 +96,6 @@ class RedaxSpaceEmail extends RedaxSpace
 
             self::setNotification('info', 'Bitte zuerst ein Benutzerkürzel anlegen.');
 
-            echo"
-<form method=\"post\" class=\"js_validate_form form_default form_comment\"  action=\"\" role=\"form\">
-<fieldset class=\"set_comment\">
-  <div class=\"line clearfix\">
-	<div class=\"grid_space s2o8\"><label for=\"Shorty\">Benutzerkürzel:</label></div>
-	<div class=\"grid_space s6o8\"><input class=\"field_text field_note\" name=\"Shorty\" type=\"text\" placeholder=\"Benutzerkürzel\"  value=\"\" /></div>
-  </div>
-</fieldset>  
-  <input type=\"hidden\" name=\"token\" value=\"". TOKEN ."\">
-  <input type=\"hidden\" name=\"setShorty\" value=\"1\">
-  <button type=\"submit\" class=\"js_submit button_default\" name=\"Anlegen\">Anlegen</button>
-</form>";
-
             print_r(Request::getPost());
         }
 
