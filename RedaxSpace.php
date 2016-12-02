@@ -4,6 +4,7 @@ namespace Redaxscript\Modules\RedaxSpace;
 use Redaxscript\Db;
 use Redaxscript\Head;
 use Redaxscript\Registry;
+use Redaxscript\Request;
 
 /**
  *
